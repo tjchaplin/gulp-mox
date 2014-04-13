@@ -5,6 +5,7 @@ gulp-mox
 
 *Issues with the output should be reported on the mox [issue tracker](https://github.com/tjchaplin/mox/issues).*
 
+[![Build Status](https://travis-ci.org/tjchaplin/gulp-mox.svg)](https://travis-ci.org/tjchaplin/gulp-mox)
 
 ## Install
 
