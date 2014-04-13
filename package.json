@@ -1,6 +1,6 @@
 {
   "name": "gulp-mox",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Gulp plugin for using mox( A markdown javascript documentation generator)",
   "main": "index.js",
   "scripts": {
@@ -27,12 +27,10 @@
     "url": "https://github.com/tjchaplin/gulp-mox/issues"
   },
   "homepage": "https://github.com/tjchaplin/gulp-mox",
-  "devDependencies": {
+  "dependencies": {
     "gulp-util": "~2.2.14",
     "through2": "~0.4.1",
-    "vinyl": "~0.2.3"
-  },
-  "dependencies": {
+    "vinyl": "~0.2.3",
     "mox": "0.0.14"
   }
 }
