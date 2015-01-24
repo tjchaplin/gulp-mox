@@ -9,7 +9,7 @@ module.exports = function(){
 	describe("Given we are using gulp-mox",function(){
 		describe("Given we are generting mox documentation",function(){
 
-			var fileData = fs.readFileSync(__dirname+'/fixtures/functionSomeClass.js','utf8');
+			var fileData = fs.readFileSync(__dirname+'/fixtures/functionSomeClass.js','utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');
 			var file = null;
 			beforeEach(function(){
 				file = new File({
@@ -20,13 +20,14 @@ module.exports = function(){
 			    });
 			});
 			describe("Given we are using default options",function(){
-				var expectedData = fs.readFileSync(__dirname+'/expected/default.md','utf8');
+				var expectedData = fs.readFileSync(__dirname+'/expected/default.md','utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');
 				it("should compile markdown documentation",function(done){
 					var moxStream = gulpMox();
 					moxStream.write(file);
 
 					moxStream.once('data',function(file){
-						assert.equal(file.contents.toString(),expectedData);
+						var actualData = file.contents.toString().replace(/\r\n/g,'\n').replace(/\r/g,'');
+						assert.equal(actualData,expectedData);
 						done();
 					});
 				});
@@ -41,7 +42,7 @@ module.exports = function(){
 				});
 			});
 			describe("Given we are using a package version option",function(){
-				var expectedData = fs.readFileSync(__dirname+'/expected/defaultWithPackageInfo.md','utf8');
+				var expectedData = fs.readFileSync(__dirname+'/expected/defaultWithPackageInfo.md','utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');
 				it("should compile markdown documentation",function(done){
 					var moxStream = gulpMox({
 									name : "PackageName",
@@ -50,7 +51,8 @@ module.exports = function(){
 					moxStream.write(file);
 
 					moxStream.once('data',function(file){
-						assert.equal(file.contents.toString(),expectedData);
+						var actualData = file.contents.toString().replace(/\r\n/g,'\n').replace(/\r/g,'')
+						assert.equal(actualData,expectedData);
 						done();
 					});
 				});
@@ -67,7 +69,7 @@ module.exports = function(){
 		});
 		describe("Given a stream",function(){
 			it("should throw gulp error",function(done){
-				var expectedData = fs.readFileSync(__dirname+'/expected/default.md','utf8');
+				var expectedData = fs.readFileSync(__dirname+'/expected/default.md','utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');
 				var fileData = fs.createReadStream(__dirname+'/fixtures/functionSomeClass.js');
 				
 				var file = new File({
@@ -87,7 +89,7 @@ module.exports = function(){
 		});
 		describe("Given mox error",function(){
 				it("should throw gulp error",function(done){
-					var expectedData = fs.readFileSync(__dirname+'/expected/default.md','utf8');
+					var expectedData = fs.readFileSync(__dirname+'/expected/default.md','utf8').replace(/\r\n/g,'\n').replace(/\r/g,'');
 					
 					var file = new File({
 						cwd: __dirname,

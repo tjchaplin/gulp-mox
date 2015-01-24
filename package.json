@@ -1,6 +1,6 @@
 {
   "name": "gulp-mox",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Gulp plugin for using mox( A markdown javascript documentation generator)",
   "main": "index.js",
   "scripts": {
@@ -21,16 +21,16 @@
     "html",
     "template"
   ],
-  "author": "Tim Chaplin <tim.chaplin@ticktockdevelopment.com> (http://tjchaplin.github.io/)",
+  "author": "Tim Chaplin <tjchaplin@hotmail.com> (http://tjchaplin.github.io/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tjchaplin/gulp-mox/issues"
   },
   "homepage": "https://github.com/tjchaplin/gulp-mox",
   "dependencies": {
-    "gulp-util": "~2.2.14",
-    "through2": "~0.4.1",
-    "vinyl": "~0.2.3",
-    "mox": "0.0.14"
+    "gulp-util": "~3.0.2",
+    "through2": "~0.6.3",
+    "vinyl": "~0.4.6",
+    "mox": "0.0.16"
   }
 }

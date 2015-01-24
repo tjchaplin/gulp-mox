@@ -3,7 +3,7 @@ gulp-mox
 
 > Gulp plugin for using [mox](https://github.com/tjchaplin/mox) ( A markdown javascript documentation generator)  
 
-*Issues with the output should be reported on the mox [issue tracker](https://github.com/tjchaplin/mox/issues).*
+* Issues with the output should be reported on the mox [issue tracker](https://github.com/tjchaplin/mox/issues).*
 
 [![Build Status](https://travis-ci.org/tjchaplin/gulp-mox.svg)](https://travis-ci.org/tjchaplin/gulp-mox)
 
